@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import "../styles/AddEvent.css";
+import { useStore } from "../context/store";
 
-const event = {
-  event_name: "Event",
-  place: "Chennai",
-  date: "01.07.2022",
-  image: "https://image-gererator-openai.netlify.app/assets/logo-c1510034.svg",
-};
 
 const AddEvent = () => {
+  const ctx = useStore();
+
+  console.log(ctx.events);
+
   const [form, setForm] = useState({
     event_name: "",
     place: "",
@@ -19,6 +18,7 @@ const AddEvent = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(form);
+    ctx.handleAddEvent(form);
   };
 
   const handleChange = (e) => {
