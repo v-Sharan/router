@@ -4,8 +4,16 @@
   background-color: black;
   padding: 10px;
   border-radius: 50px;
+  opacity: 50;
 }
 a {
   text-decoration: none;
   color: white;
+}
+a:hover {
+  color: teal;
+}
+
+.active {
+  color: gold;
 }
