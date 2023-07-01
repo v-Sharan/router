@@ -1,5 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Events from "./pages/Events";
+import AddEvent from "./pages/AddEvent";
 
 const App = () => {
   return (
